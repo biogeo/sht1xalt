@@ -179,8 +179,8 @@ namespace sht1xalt {
       //     STATUS_BIT_RES:    To turn on low resolution mode
       //     STATUS_BIT_OTP:    To turn off "OTP reload" (whatever that is)
       //     STATUS_BIT_HEATER: To turn on the heater
-      // To set more than one of these at a time, use bitwise "&", as in:
-      //     sensor.setStatus(STATUS_BIT_RES & STATUS_BIT_HEATER)
+      // To set more than one of these at a time, use bitwise "|", as in:
+      //     sensor.setStatus(STATUS_BIT_RES | STATUS_BIT_HEATER)
       // which will turn on low resolution mode and the heater. Note that the
       // status register is fully overwritten, so sending just STATUS_BIT_RES
       // will also turn off the heater if it was previously on. Returns
